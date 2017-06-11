@@ -43,4 +43,4 @@ The initial idea for using Sass maps for breakpoints came from here:
 
 Some static code analysis tools I've used are:
 * [Sass linter](https://www.npmjs.com/package/sass-lint)
-* [Stylesheet analysis tool](https://github.com/katiefenn/parker)
+* [Stylesheet analysis tool - Parker](https://github.com/katiefenn/parker)
