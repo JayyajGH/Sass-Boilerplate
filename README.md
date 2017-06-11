@@ -31,16 +31,16 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 ## Acknowledgements
 
 The structure of the boilerplate is based on the two patterns:
-[SMACSS](https://smacss.com/)
-[Sass Guidelines 7-1 pattern](https://sass-guidelin.es/#architecture)
+* [SMACSS](https://smacss.com/)
+* [Sass Guidelines 7-1 pattern](https://sass-guidelin.es/#architecture)
 
 The colour palette ideas were formed from these articles:
-[Using maps for setting up the colour palette](https://scotch.io/tutorials/aesthetic-sass-2-colors)
-[Using maps for setting the tone of the palette](http://erskinedesign.com/blog/friendlier-colour-names-sass-maps)
+* [Using maps for setting up the colour palette](https://scotch.io/tutorials/aesthetic-sass-2-colors)
+* [Using maps for setting the tone of the palette](http://erskinedesign.com/blog/friendlier-colour-names-sass-maps)
 
 The initial idea for using Sass maps for breakpoints came from here:
-[Responsive breakpoints](https://www.sitepoint.com/managing-responsive-breakpoints-sass)
+* [Responsive breakpoints](https://www.sitepoint.com/managing-responsive-breakpoints-sass)
 
 Some static code analysis tools I've used are:
-[Sass linter](https://www.npmjs.com/package/sass-lint)
-[Stylesheet analysis tool](https://github.com/katiefenn/parker)
+* [Sass linter](https://www.npmjs.com/package/sass-lint)
+* [Stylesheet analysis tool](https://github.com/katiefenn/parker)
