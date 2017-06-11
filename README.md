@@ -18,10 +18,6 @@ This project is written in Sass and so you will need a way of building Sass.
 All the tools I have used are run using Node and Gulp although you can use anything that can compile Sass (.scss style). I am using gulp-sass.
 [How to install and use gulp-sass](https://www.npmjs.com/package/gulp-sass)
 
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
 ## Authors
 
 * **Jason Harris** - *Initial work* - [JayyajGH](https://github.com/JayyajGH)
