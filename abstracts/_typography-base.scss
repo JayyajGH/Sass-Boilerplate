@@ -1,0 +1,162 @@
+////
+/// @author Jason Harris
+////
+
+// Typography base
+//
+// This file contains:
+//   - Variables and mixins for base typography settings
+//   - Font size, line heights (leading) and chararacter spacing
+//   - The setting of the baseline height for all other vertical dimensions
+//
+// Ideally a baseline height would be set which would then be used to create
+// the vertical rhythm of the page.
+// This article describes what that's all about:
+// https://scotch.io/tutorials/aesthetic-sass-3-typography-and-vertical-rhythm
+//
+// For vertical rhythm ideally you need:
+//   - A modular scale to calculate font sizes
+//   - A baseline to calculate line heights (leading) and the vertical heights of
+//     all the other elements on the page i.e. buttons, elements, margins etc.
+//
+// Modular scale - This is a mathematical way of calculating a visually pleasing
+// scale, in this case, a set of font sizes.
+// A good website for calculating these is http://www.modularscale.com/
+// Alternatively a designer should also be able to generate a visually pleasing
+// set of font sizes. In that case the values can instead by hardcoded.
+// The base font size in the majority of browsers is 16px which tends to be
+// used for the size of the body text
+// Sometimes a single modular scale doesn't work across all breakpoints in a responsive
+// design.  In those cases you can use different scales for each breakpoint.
+// This link describes some of the other available options:
+// https://zellwk.com/blog/responsive-modular-scale/
+// Is it perfectly fine to miss out some of the sizes in the modular scale if they
+// aren't working
+//
+// Baseline - This is usually the base font size multiplied by a value between 1 and 1.5
+// All line-heights and the total height (including borders, padding and margin) of all
+// elements must then be a multiple of that baseline
+// e.g. buttonheight + margins + padding = baseline * x
+
+/// Definition of the baseline for the site.
+/// This is used to keep a consistent and attractive vertical rhythm
+/// @access public
+$baseline: 1.5rem;
+
+/// Definition of the base typography for all breakpoints.
+/// The font size and the line height (leading) are defined
+/// @access public
+$types: (
+    'small and above': (
+        // Major third
+        -2: ( font-size: .64rem, line-height: $baseline ),
+        -1: ( font-size: .8rem, line-height: $baseline ),
+        0:  ( font-size: 1rem, line-height: $baseline ),
+        1:  ( font-size: 1.25rem, line-height: $baseline*2 ),
+        2:  ( font-size: 1.563rem, line-height: $baseline*2 ),
+        3:  ( font-size: 1.953rem, line-height: $baseline*2 ),
+        4:  ( font-size: 2.441rem, line-height: $baseline*3 )
+    ),
+    'medium and above': (
+        // Perfect fourth
+        -2: ( font-size: .563rem, line-height: $baseline ),
+        -1: ( font-size: .75rem, line-height: $baseline ),
+        0:  ( font-size: 1rem, line-height: $baseline ),
+        1:  ( font-size: 1.333rem, line-height: $baseline*2 ),
+        2:  ( font-size: 1.777rem, line-height: $baseline*2 ),
+        3:  ( font-size: 2.369rem, line-height: $baseline*2 ),
+        4:  ( font-size: 3.157rem, line-height: $baseline*3 )
+    ),
+    'large and above': (
+        // Perfect fifth
+        -2: ( font-size: .444rem, line-height: $baseline ),
+        -1: ( font-size: .667rem, line-height: $baseline ),
+        0:  ( font-size: 1rem, line-height: $baseline ),
+        1:  ( font-size: 1.5rem, line-height: $baseline*2 ),
+        2:  ( font-size: 2.25rem, line-height: $baseline*2 ),
+        3:  ( font-size: 3.375rem, line-height: $baseline*2 ),
+        4:  ( font-size: 5.063rem, line-height: $baseline*3 )
+    )
+);
+
+/// Set font size and line height for the specified breakpoint and typeset level.
+/// This method uses a set of fixed breakpoints.  Another option is to set a base line height
+/// and calculate all other line heights from that value.  That value can then be used to
+/// calculate all heights of spacing, elements etc. to create a nice vertical rhythm.
+/// @example scss
+///   typeset(2, 'medium and above')
+///   typeset('large and above')
+/// @output
+///  ``` css
+///  font-size: 1.5rem;
+///  line-height: 2rem;
+///  ```
+/// @access public
+/// @param {number} $level - The type level for body, heading etc.
+/// @param {string} $bp - The breakpoint to generate the typeset information for
+/// @requires {variable} types
+@mixin typeset($level: 0, $bp: 'small and above') {
+
+    $breakpointmap: map-get($types, $bp);
+
+    @if ($breakpointmap) {
+
+        $typemap: map-get($breakpointmap, $level);
+        @if ($typemap) {
+            $fontsize: 'font-size';
+
+            @if map-has-key($typemap, $fontsize) {
+                // Actually set the font-size property
+                #{$fontsize}: map-get($typemap, $fontsize);
+            } @else {
+                @error 'Fontsize #{$fontsize} is missing from the type map';
+            }
+
+            $lineheight: 'line-height';
+            @if map-has-key($typemap, $lineheight) {
+                // Actually set the line-height property
+                #{$lineheight}: map-get($typemap, $lineheight);
+            } @else {
+                @error 'Lineheight #{$lineheight} is missing from the type map';
+            }
+        } @else {
+            @error 'Level #{$level} cannot be found in the breakpoint map';
+          }
+    } @else {
+        @error 'Breakpoint #{$bp} cannot be found in the types map';
+    }
+}
+
+/// type-setting - Set font sizes and line heights for the specified typeset level
+///    at each breakpoint
+/// @example scss - typeset function
+///   type-setting(2)
+///   type-setting()
+/// @output
+/// ``` css
+///  @media (min-width: 37.5em) {
+///    font-size: 1.25rem;
+///    line-height: 1.5rem;
+///  }
+///  @media (min-width: 56.25em) {
+///    font-size: 1.333rem;
+///    line-height: 1.5rem;
+///  }
+///  @media (min-width: 75em) {
+///    font-size: 1.5rem;
+///    line-height: 1.5rem;
+///  }
+/// ```
+/// @access public
+/// @param {number} $level - The type level for body, heading etc.
+/// @requires {mixin} typeset
+/// @requires {variable} $breakpoints
+@mixin type-setting($level: 0) {
+    @include typeset($level);
+
+    @each $bp, $bpsize in $breakpoints {
+        @include respond-to($bp) {
+            @include typeset($level, '#{$bp}');
+        }
+    }
+}

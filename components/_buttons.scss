@@ -1,0 +1,76 @@
+////
+/// @author Jason Harris
+////
+
+// Buttons - These styles are for use with both anchors that need to be styled
+// as buttons and buttons that need to be styled as... buttons.
+
+.btn {
+    display: inline-block;
+}
+
+.btn--simple {
+    text-decoration: none;
+    border-style: none;
+}
+
+//.btn--ghost {
+//}
+
+// Size variants
+.btn--small {
+    padding: $baseline / 4;
+    @include type-setting(-1);
+}
+
+.btn--medium {
+    padding: $baseline / 2;
+    @include type-setting(0);
+}
+
+.btn--large {
+    padding: $baseline / 2;
+    @include type-setting(1);
+}
+
+.btn--fullwidth {
+    width: 100%;
+    text-align: center;
+}
+
+.btn--halfwidth {
+    width: 50%;
+    text-align: center;
+}
+
+// Style variants
+.btn--primary {
+    background-color: color('purple', 'base');
+    color: color('white');
+
+    &:hover {
+        background-color: color('purple' , 'dark')
+    }
+}
+
+.btn--secondary {
+    background-color: color('green', 'light');
+    color: color('black');
+
+    &:hover {
+        background-color: color('green' , 'base')
+    }
+}
+
+.btn--tertiary {
+    background-color: color('grey', 'x-light');
+    color: color('black');
+
+    &:hover {
+        background-color: color('grey' , 'dark')
+    }
+}
+
+.btn-group {
+    margin-bottom: $baseline;
+}

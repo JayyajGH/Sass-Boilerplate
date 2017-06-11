@@ -1,0 +1,53 @@
+////
+/// @author Jason Harris
+////
+
+// Add any general mixins here
+
+
+/// Set the link color for each state
+/// @param {Color} $link - Default link color
+/// @param {Color} $visited - Visited link color
+/// @param {Color} $hover - Hover link color
+/// @param {Color} $active - Active/Focus link color
+/// @example scss
+///    .linkclass {
+///       link-color(#FFF, #FEF, #BADA55, #FAF)
+///    }
+/// @output
+/// ``` css
+///  .linkclass {
+///     color: #FFF;
+///  }
+///  .linkclass:visited {
+///     color: #FEF;
+///  }
+///  .linkclass:hover {
+///     color: #BADA55;
+///  }
+///  .linkclass:active {
+///     color: #FAF;
+///  }
+///  .linkclass:focus {
+///     color: #FAF;
+///  }
+///   ```
+/// @access public
+@mixin link-color ($link, $visited, $hover, $active) {
+    & {
+        color: $link;
+
+        &:visited {
+            color: $visited;
+        }
+
+        &:hover {
+            color: $hover;
+        }
+
+        &:active,
+        &:focus {
+            color: $active;
+        }
+    }
+}

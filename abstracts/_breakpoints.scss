@@ -1,0 +1,57 @@
+////
+/// @author Jason Harris
+////
+
+/// Definition of the breakpoints for the site.  Min-width is used for the media feature
+/// so anything below that will take on the default properties.
+/// These breakpoints are for reference only and you should choose suitable breakpoints
+/// for your own site. The one rule is don't match them to devices.
+///
+/// Should we use pixels, rems or ems?
+/// - Never use pixels
+/// - Use rems for sizing and spacing
+/// - Use ems for media queries
+/// @link http://engageinteractive.co.uk/blog/em-vs-rem-vs-px Should we use pixels, rems or ems?
+/// @access public
+$breakpoints: (
+    //'extra small and above': (min-width: 37.5em),   // 600px = 37.5em
+    'small and above': (min-width: 37.5em),   // 600px = 37.5em
+    'medium and above': (min-width: 56.25em), //  900px = 56.25em
+    'large and above': (min-width: 75em) // 1200px = 75em
+    //'extra large and above': (min-width: 100em) // 1600px = 100em
+);
+
+/// Responsive breakpoint manager
+///
+/// Pass in a breakpoint name from the breakpoint map and it will generate you a media query
+/// @access public
+/// @param {String} $breakpoint - Required breakpoint to generate media query for
+/// @requires {variable} $breakpoints
+/// @example scss
+///   @include respond-to('medium and above') {
+///     width: 50%;
+///   }
+/// @output
+/// ``` css
+///  @media (min-width: 56.25em) {
+///    width: 50%;
+///  }
+///   ```
+@mixin respond-to($breakpoint) {
+    $media-feature: map-get($breakpoints, $breakpoint);
+
+    @if $media-feature {
+        // If the media feature is a string then get rid of any quotes and return it in string form
+        $query: if(
+            type-of($media-feature) == 'string',
+            unquote($media-feature),
+            inspect($media-feature)
+        );
+
+        @media #{$query} {
+            @content;
+        }
+    } @else {
+        @error 'No value found for '#{$breakpoint}'. ' + 'Please make sure it is defined in '#{$breakpoints}' map.';
+    }
+}

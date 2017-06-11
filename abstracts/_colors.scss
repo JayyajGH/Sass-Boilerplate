@@ -1,0 +1,105 @@
+////
+/// @author Jason Harris
+////
+
+/// Definition of the color palette for the site.
+/// It includes the base colours and their various tones
+///
+/// Acceptable tone options:
+/// - x-light
+/// - light
+/// - mid-light
+/// - base (default)
+/// - mid-dark
+/// - dark
+/// - x-dark
+/// @link https://scotch.io/tutorials/aesthetic-sass-2-colors Using maps for setting up the colour palette
+/// @link http://erskinedesign.com/blog/friendlier-colour-names-sass-maps/ Using maps for setting the tone of the palette
+/// @access public
+/// @example scss
+///   $spectrum: map-get($color-palettes, 'grey')
+///   $color: map-get($spectrum, 'dark')
+$color-palettes: (
+    'white': (
+        'base': #FFF
+    ),
+    'black': (
+        'base': #000
+    ),
+    'purple': (
+        'base': #60C,
+        'light': #D9B3FF,
+        'dark': #4D0099
+    ),
+    'grey': (
+        'x-light': #F2F2F2,
+        'light': #D9D9D9,
+        'base': #BFBFBF,
+        'dark': #8C8C8C,
+        'darker': #666
+    ),
+    'green': (
+        'light': #9FB,
+        'base': #0C4,
+        'dark': #062
+    )
+);
+
+/// Definition of the opacity options for the color palette.
+/// To apply to either dark or light colours
+/// @access public
+/// @example scss
+///   $alpha: map-get($opacity-options, 'light')
+///   // .8
+$opacity-options: (
+    'light': .8,
+    'dark': .4
+);
+
+/// Function for returing the hex color definition from the palette, tone and opacity
+/// @access public
+/// @require {variable} $color-palettes
+/// @require {variable} $opacity-options
+/// @param {string} $palette - The required palette
+/// @param {string} $tone - The required palette tone
+/// @param {string | number} $opacity [1] - The required opacity.  Can be a number or a value in the map
+/// @return {variable} A hex colour value
+/// @example scss
+///   color()
+///   color('grey')
+///   color('grey', 'dark')
+///   color('purple', 'darker', 0.5)
+///   color('purple', 'darker', 'light')
+@function color($palette: 'white', $tone: 'base', $opacity: 1) {
+    $color: null;
+
+    // Get the color spectrum
+    $color-spectrum: map-get($color-palettes, $palette);
+    @if $color-spectrum {
+
+        // Get the color variant
+        $color: map-get($color-spectrum, $tone);
+        @if $color {
+            // Even if the colour is in the map it might still not be a valid CSS color
+            @if type-of($color) == color {
+
+                // Get the alpha setting
+                // If the type passed in is a number then use it directly.  Otherwise see if it is in the map
+                $alpha: if(type-of($opacity) == 'number', $opacity, map-get($opacity-options, $opacity));
+
+                // Set the alpha of the color
+                @if $alpha {
+                    $color: rgba($color, $alpha);
+                }
+            } @else {
+                @error '#{$color} is not a valid CSS color';
+            }
+        } @else {
+            @error 'Tone #{$tone} is missing from the spectrum map';
+        }
+    } @else {
+        @error 'Colour palette #{$palette} is missing from the palette map';
+    }
+
+    @return $color;
+}
