@@ -10,9 +10,7 @@ although you will probably want to swap them out for something to fit with your 
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine.  All documentation is contained within the files themselves.  It can be read directly
-but a nicer way is to run it through sassDoc.
-
-[SassDoc](http://sassdoc.com/)
+but a nicer way is to run it through [SassDoc](http://sassdoc.com/)
 
 ### Prerequisites
 
