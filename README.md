@@ -1,9 +1,12 @@
 # Sass boilerplate library
 
 This is a sample project containing the basic boilerplate Sass styling code to get a project up and running.
+
 Its structure is based on the SMACSS and 7-1 architecture patterns and it contains the basic code to get up and running with breakpoints, typography, colours and other core elements.
+
 Many of the ideas are combinations of various other ideas with some enhancements.  I have tried to list all sources in the acknowledgements section.
 It follows as many of the latest best practices as possible including atomic CSS, BEM, low selector specificity, good vertical rhythm etc.
+
 This is not a library of awesome design ideas.  The colours etc. are for demonstration purposes only.  The breakpoints, font-sizing and margins etc. are valid and could be used
 although you will probably want to swap them out for something to fit with your own design.
 
