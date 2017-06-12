@@ -25,7 +25,7 @@ All the tools I have used are run using Node and Gulp although you can use anyth
 
 * **Jason Harris** - *Initial work* - [JayyajGH](https://github.com/JayyajGH)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/JayyajGH/Sass-Boilerplate/graphs/contributors) who participated in this project.
 
 ## License
 
