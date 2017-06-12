@@ -10,6 +10,12 @@ It follows as many of the latest best practices as possible including atomic CSS
 This is not a library of awesome design ideas.  The colours etc. are for demonstration purposes only.  The breakpoints, font-sizing and margins etc. are valid and could be used
 although you will probably want to swap them out for something to fit with your own design.
 
+If vertical rhythm and modular type scales are new to you then these are some good articles:
+* [Modular type scale]( http://www.modularscale.com/?1&em&1.5&web&text )
+* [Vertical rhythm](https://drewish.com/tools/vertical-rhythm/ )
+* [Baseline grid](http://alistapart.com/article/settingtypeontheweb )
+* [Putting it all together in code](https://scotch.io/tutorials/aesthetic-sass-3-typography-and-vertical-rhythm)
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine.  All documentation is contained within the files themselves.  It can be read directly
