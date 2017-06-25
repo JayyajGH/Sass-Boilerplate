@@ -61,3 +61,44 @@
     height: 1px;
     overflow: hidden;
 }
+
+// Border styles
+// Todo:
+//  Determine how best to maintain vertical rhythm when adding a border
+//  It's likely to be reducing the margin by the border width
+//  Maybe add a mixin to set the border based on All/Top/Bottom/Left/Right params
+.u-border--solid {
+  border-style: solid;
+}
+
+.u-border-width--thin {
+    border-width: 3px;
+}
+
+.u-border-width--medium {
+    border-width: 5px;
+}
+
+.u-border-width--thick {
+    border-width: 7px;
+}
+
+.u-borderbottom-width--thin {
+    border-bottom-width: 3px;
+}
+
+.u-borderbottom-width--medium {
+    border-bottom-width: 5px;
+}
+
+.u-borderbottom-width--thick {
+    border-bottom-width: 7px;
+}
+
+.u-border-color--black {
+    border-color: black;
+}
+
+.u-border-radius--medium {
+  border-radius: 5px;
+}
