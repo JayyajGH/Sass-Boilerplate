@@ -5,7 +5,7 @@
 
 // Align block elements
 .u-block-centered {
-  margin: 0 auto !important;
+    margin: 0 auto !important;
 }
 
 // Align element content
@@ -16,7 +16,7 @@
 .u-align--right {
     text-align: right !important;
 }
- 
+
 .u-align--center {
     text-align: center !important;
 }
@@ -53,7 +53,7 @@
 
 // NB: This will be hidden from view but still be available to screenreaders
 // http://webaim.org/techniques/css/invisiblecontent/
-.u-hiddenVisually {
+.u-hidden-visually {
     position: absolute;
     left: -10000px;
     top: auto;
