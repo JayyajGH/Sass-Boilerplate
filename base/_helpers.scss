@@ -10,54 +10,54 @@
 
 // Align element content
 .u-align--left {
-  text-align: left !important;
+    text-align: left !important;
 }
 
 .u-align--right {
-  text-align: right !important;
+    text-align: right !important;
 }
  
 .u-align--center {
-  text-align: center !important;
+    text-align: center !important;
 }
 
 // Float elements
 .u-float--left {
-  float: left !important;
+    float: left !important;
 }
 
 .u-float--right {
-  float: right !important;
+    float: right !important;
 }
 
 // Display settings
 .u-block {
-  display: block !important;
+    display: block !important;
 }
 
 .u-inline {
-  display: inline !important;
+    display: inline !important;
 }
 
 .u-inline-block {
-  display: inline-block !important;
+    display: inline-block !important;
 }
 
 // Hiding content
 
 // NB: This will not be available to screenreaders.  Some screenreaders will ignore display: none
 .u-hidden {
-  display: none;
-  visibility: hidden;
+    display: none;
+    visibility: hidden;
 }
 
 // NB: This will be hidden from view but still be available to screenreaders
 // http://webaim.org/techniques/css/invisiblecontent/
 .u-hiddenVisually {
-  position: absolute;
-  left: -10000px;
-  top: auto;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
 }
