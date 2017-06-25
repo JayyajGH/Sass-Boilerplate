@@ -55,7 +55,7 @@ The initial idea for using Sass maps for breakpoints came from here:
 * [Responsive breakpoints](https://www.sitepoint.com/managing-responsive-breakpoints-sass)
 
 Using utility classes:
-* [Utility classes](http://davidtheclark.com/on-utility-classes/)
+* [The role of utility classes](http://davidtheclark.com/on-utility-classes/)
 * [Namespaces for utility classes](https://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/)
 
 Some static code analysis tools I've used are:
