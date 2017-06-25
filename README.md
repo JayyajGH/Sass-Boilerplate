@@ -33,6 +33,10 @@ All the tools I have used are run using Node and Gulp although you can use anyth
 
 See also the list of [contributors](https://github.com/JayyajGH/Sass-Boilerplate/graphs/contributors) who participated in this project.
 
+## Contributing
+
+Please read [CONTRIBUTING.md](https://github.com/JayyajGH/Sass-Boilerplate/blob/master/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/JayyajGH/Sass-Boilerplate/blob/master/licence.md) file for details
