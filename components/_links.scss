@@ -5,22 +5,22 @@
 // Basic styles for anchor links that are styled as anchors - as opposed to anchor
 // links that are styled as buttons
 .link {
-  display: inline-block; // This is so we can add vertical padding and margin
-  margin-bottom: $baseline;
+    display: inline-block; // This is so we can add vertical padding and margin
+    margin-bottom: $baseline;
 }
 
 .link--regular {
-    @include link-color(color('black', 'base'), color('grey', 'base'), color('purple', 'base'), color('white', 'base'))
+    @include link-color(color('black', 'base'), color('grey', 'base'), color('purple', 'base'), color('white', 'base'));
 }
 
 .link--subtle {
-    @include link-color(color('grey', 'base'), color('grey', 'dark'), color('purple', 'base'), color('white', 'base'))
+    @include link-color(color('grey', 'base'), color('grey', 'dark'), color('purple', 'base'), color('white', 'base'));
 }
 
 .link--dark {
-    @include link-color(color('black', 'base'), color('grey', 'base'), color('purple', 'base'), color('white', 'base'))
+    @include link-color(color('black', 'base'), color('grey', 'base'), color('purple', 'base'), color('white', 'base'));
 }
 
 .link--phone {
-    @include link-color(color('black', 'base'), color('grey', 'base'), color('purple', 'base'), color('white', 'base'))
+    @include link-color(color('black', 'base'), color('grey', 'base'), color('purple', 'base'), color('white', 'base'));
 }
