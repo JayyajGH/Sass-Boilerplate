@@ -72,6 +72,21 @@ body {
     // Any other style like colour or font weight
 }
 
-.header--center {
-    text-align: center;
+// Superscript and Subscript text - Without breaking line height
+%text-subsuper-base {
+    font-size: 60%; // Specified in % so that the sup/sup is the right size relative to the surrounding text
+    line-height: 0; // Zero out the line-height so that it doesn't interfere with the positioning that follows
+    position: relative; // Makes all browsers position the sup/sup properly, relative to the surrounding text
+    vertical-align: baseline;
+    display: inline-block;
+}
+
+sup {
+    @extend %text-subsuper-base;
+    top: -.5em;
+}
+ 
+sub {
+    @extend %text-subsuper-base;
+    bottom: -.25em;
 }
