@@ -43,7 +43,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](https://gi
 
 ## Acknowledgements
 
-The structure of the boilerplate is based on the two patterns:
+The structure of the boilerplate is based on two main patterns:
 * [SMACSS](https://smacss.com/)
 * [Sass Guidelines 7-1 pattern](https://sass-guidelin.es/#architecture)
 
