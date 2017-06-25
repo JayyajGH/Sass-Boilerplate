@@ -74,19 +74,19 @@ body {
 
 // Superscript and Subscript text - Without breaking line height
 %text-subsuper-base {
-    font-size: 60%; // Specified in % so that the sup/sup is the right size relative to the surrounding text
-    line-height: 0; // Zero out the line-height so that it doesn't interfere with the positioning that follows
-    position: relative; // Makes all browsers position the sup/sup properly, relative to the surrounding text
-    vertical-align: baseline; // This is default in Eric Meyers reset but put here anyway in case that changes 
-    display: inline-block;
+    font-size: 60%; // Specified in % so that the sup/sup is the right size relative to the surrounding text
+    line-height: 0; // Zero out the line-height so that it doesn't interfere with the positioning that follows
+    position: relative; // Makes all browsers position the sup/sup properly, relative to the surrounding text
+    vertical-align: baseline;
+    display: inline-block;
 }
 
 sup {
-    @extend %text-subsuper-base;
-    top: -.5em;
+    @extend %text-subsuper-base;
+    top: -.5em;
 }
  
 sub {
-    @extend %text-subsuper-base;
-    bottom: -.25em;
+    @extend %text-subsuper-base;
+    bottom: -.25em;
 }
