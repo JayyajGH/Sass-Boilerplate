@@ -15,6 +15,25 @@ $_border-width--thick: .4375rem;
 $_border-direction--top: 'top';
 $_border-direction--bottom: 'bottom';
 
+/// Set the border width whilst ensuring the vertical rhythm is correct
+/// @param {number} $width - Width of required border
+/// @param {string} $side [''] - Side to add border to.  If omitted the border will be added to all sides
+/// @example scss
+///      _border-width($_border-width--thin);
+///      _border-width($_border-width--thin, $_border-direction--top);
+/// @output
+/// ``` css
+///  .u-border-width--thin {
+///     border-width: 3px;
+///     padding-top: 21px;
+///     padding-bottom: 21px;
+///  }
+///  .u-borderbottom-width--thin {
+///     border-bottom-width: 3px;
+///     padding-bottom: 21px;
+///  }
+///   ```
+/// @access private
 @mixin _border-width ($width, $side: '') {
     $padding: $baseline - $width;
 
