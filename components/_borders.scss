@@ -9,13 +9,13 @@
 // rhythm and then taking away the border width
 // This applies to both top and bottom borders where present
 
-$border-width--thin: .1875rem;
-$border-width--medium: .3125rem;
-$border-width--thick: .4375rem;
-$border-direction--top: 'top';
-$border-direction--bottom: 'bottom';
+$_border-width--thin: .1875rem;
+$_border-width--medium: .3125rem;
+$_border-width--thick: .4375rem;
+$_border-direction--top: 'top';
+$_border-direction--bottom: 'bottom';
 
-@mixin border-width ($width, $side: '') {
+@mixin _border-width ($width, $side: '') {
     $padding: $baseline - $width;
 
     @if ($side == '') {
@@ -33,39 +33,39 @@ $border-direction--bottom: 'bottom';
 }
 
 .u-border-width--thin {
-    @include border-width($border-width--thin);
+    @include _border-width($_border-width--thin);
 }
 
 .u-border-width--medium {
-    @include border-width($border-width--medium);
+    @include _border-width($_border-width--medium);
 }
 
 .u-border-width--thick {
-    @include border-width($border-width--thick);
+    @include _border-width($_border-width--thick);
 }
 
 .u-bordertop-width--thin {
-    @include border-width($border-width--thin, $border-direction--top);
+    @include _border-width($_border-width--thin, $_border-direction--top);
 }
 
 .u-bordertop-width--medium {
-    @include border-width($border-width--medium, $border-direction--top);
+    @include _border-width($_border-width--medium, $_border-direction--top);
 }
 
 .u-bordertop-width--thick {
-    @include border-width($border-width--thick, $border-direction--top);
+    @include _border-width($_border-width--thick, $_border-direction--top);
 }
 
 .u-borderbottom-width--thin {
-    @include border-width($border-width--thin, $border-direction--bottom);
+    @include _border-width($_border-width--thin, $_border-direction--bottom);
 }
 
 .u-borderbottom-width--medium {
-    @include border-width($border-width--medium, $border-direction--bottom);
+    @include _border-width($_border-width--medium, $_border-direction--bottom);
 }
 
 .u-borderbottom-width--thick {
-    @include border-width($border-width--thick, $border-direction--bottom);
+    @include _border-width($_border-width--thick, $_border-direction--bottom);
 }
 
 .u-border-color--black {
