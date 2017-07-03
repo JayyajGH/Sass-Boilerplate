@@ -1,0 +1,85 @@
+////
+/// @author Jason Harris
+////
+
+// Border styles
+// To maintain vertical rhythm any border width must be added to any element
+// padding to make up the baseline rhythm value.
+// This is dealt with here by setting the element padding to the baseline
+// rhythm and then taking away the border width
+// This applies to both top and bottom borders where present
+
+$border-width--thin: .1875rem;
+$border-width--medium: .3125rem;
+$border-width--thick: .4375rem;
+$border-direction--top: 'top';
+$border-direction--bottom: 'bottom';
+
+@mixin border-width ($width, $side: '') {
+    $padding: $baseline - $width;
+
+    @if ($side == '') {
+        border-width: $width;
+        padding-top: $padding;
+        padding-bottom: $padding;
+    } @else {
+        border-#{$side}-width: $width;
+        padding-#{$side}: $padding;
+    }
+}
+
+.u-border--solid {
+    border-style: solid;
+}
+
+.u-border-width--thin {
+    @include border-width($border-width--thin);
+}
+
+.u-border-width--medium {
+    @include border-width($border-width--medium);
+}
+
+.u-border-width--thick {
+    @include border-width($border-width--thick);
+}
+
+.u-bordertop-width--thin {
+    @include border-width($border-width--thin, $border-direction--top);
+}
+
+.u-bordertop-width--medium {
+    @include border-width($border-width--medium, $border-direction--top);
+}
+
+.u-bordertop-width--thick {
+    @include border-width($border-width--thick, $border-direction--top);
+}
+
+.u-borderbottom-width--thin {
+    @include border-width($border-width--thin, $border-direction--bottom);
+}
+
+.u-borderbottom-width--medium {
+    @include border-width($border-width--medium, $border-direction--bottom);
+}
+
+.u-borderbottom-width--thick {
+    @include border-width($border-width--thick, $border-direction--bottom);
+}
+
+.u-border-color--black {
+    border-color: color('black');
+}
+
+.u-border-radius--small {
+    border-radius: 3px;
+}
+
+.u-border-radius--medium {
+    border-radius: 5px;
+}
+
+.u-border-radius--large {
+    border-radius: 7px;
+}
