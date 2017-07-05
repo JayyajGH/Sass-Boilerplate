@@ -23,12 +23,12 @@ $_border-direction--bottom: 'bottom';
 ///      _border-width($_border-width--thin, $_border-direction--top);
 /// @output
 /// ``` css
-///  .u-border-width--thin {
+///  .border-width--thin {
 ///     border-width: 3px;
 ///     padding-top: 21px;
 ///     padding-bottom: 21px;
 ///  }
-///  .u-borderbottom-width--thin {
+///  .borderbottom-width--thin {
 ///     border-bottom-width: 3px;
 ///     padding-bottom: 21px;
 ///  }
@@ -47,58 +47,58 @@ $_border-direction--bottom: 'bottom';
     }
 }
 
-.u-border--solid {
+.border--solid {
     border-style: solid;
 }
 
-.u-border-width--thin {
+.border-width--thin {
     @include _border-width($_border-width--thin);
 }
 
-.u-border-width--medium {
+.border-width--medium {
     @include _border-width($_border-width--medium);
 }
 
-.u-border-width--thick {
+.border-width--thick {
     @include _border-width($_border-width--thick);
 }
 
-.u-bordertop-width--thin {
+.bordertop-width--thin {
     @include _border-width($_border-width--thin, $_border-direction--top);
 }
 
-.u-bordertop-width--medium {
+.bordertop-width--medium {
     @include _border-width($_border-width--medium, $_border-direction--top);
 }
 
-.u-bordertop-width--thick {
+.bordertop-width--thick {
     @include _border-width($_border-width--thick, $_border-direction--top);
 }
 
-.u-borderbottom-width--thin {
+.borderbottom-width--thin {
     @include _border-width($_border-width--thin, $_border-direction--bottom);
 }
 
-.u-borderbottom-width--medium {
+.borderbottom-width--medium {
     @include _border-width($_border-width--medium, $_border-direction--bottom);
 }
 
-.u-borderbottom-width--thick {
+.borderbottom-width--thick {
     @include _border-width($_border-width--thick, $_border-direction--bottom);
 }
 
-.u-border-color--black {
+.border-color--black {
     border-color: color('black');
 }
 
-.u-border-radius--small {
+.border-radius--small {
     border-radius: 3px;
 }
 
-.u-border-radius--medium {
+.border-radius--medium {
     border-radius: 5px;
 }
 
-.u-border-radius--large {
+.border-radius--large {
     border-radius: 7px;
 }
