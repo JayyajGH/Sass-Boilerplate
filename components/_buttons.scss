@@ -5,11 +5,11 @@
 // Buttons - These styles are for use with both anchors that need to be styled
 // as buttons and buttons that need to be styled as... buttons.
 
-.btn {
+.button {
     display: inline-block;
 }
 
-.btn--simple {
+.button--simple {
     text-decoration: none;
     border-style: none;
 }
@@ -18,33 +18,33 @@
 //}
 
 // Size variants
-.btn--small {
+.button--small {
     padding: $baseline / 4;
     @include type-setting(-1);
 }
 
-.btn--medium {
+.button--medium {
     padding: $baseline / 2;
     @include type-setting(0);
 }
 
-.btn--large {
+.button--large {
     padding: $baseline / 2;
     @include type-setting(1);
 }
 
-.btn--fullwidth {
+.button--fullwidth {
     width: 100%;
     text-align: center;
 }
 
-.btn--halfwidth {
+.button--halfwidth {
     width: 50%;
     text-align: center;
 }
 
 // Style variants
-.btn--primary {
+.button--primary {
     background-color: color('purple', 'base');
     color: color('white');
 
@@ -53,7 +53,7 @@
     }
 }
 
-.btn--secondary {
+.button--secondary {
     background-color: color('green', 'light');
     color: color('black');
 
@@ -62,7 +62,7 @@
     }
 }
 
-.btn--tertiary {
+.button--tertiary {
     background-color: color('grey', 'x-light');
     color: color('black');
 
@@ -71,6 +71,12 @@
     }
 }
 
-.btn-group {
+.button-icon {
+}
+
+.button-icon-left {
+}
+
+.button-group {
     margin-bottom: $baseline;
 }
