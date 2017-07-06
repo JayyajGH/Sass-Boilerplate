@@ -59,7 +59,7 @@ Using utility classes:
 * [Namespaces for utility classes](https://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/)
 
 Using single direction margins:
-* [Single direction margins] (https://csswizardry.com/2012/06/single-direction-margin-declarations/)
+* [Single direction margins](https://csswizardry.com/2012/06/single-direction-margin-declarations/)
 
 Some static code analysis tools I've used are:
 * [Sass linter](https://www.npmjs.com/package/sass-lint)
