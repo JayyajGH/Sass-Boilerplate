@@ -12,6 +12,9 @@
 $_border-width--thin: .1875rem;
 $_border-width--medium: .3125rem;
 $_border-width--thick: .4375rem;
+$_border-radius--small: .1875rem;
+$_border-radius--medium: .3125rem;
+$_border-radius--large: .4375rem;
 $_border-direction--top: 'top';
 $_border-direction--bottom: 'bottom';
 
@@ -92,13 +95,13 @@ $_border-direction--bottom: 'bottom';
 }
 
 .border-radius--small {
-    border-radius: 3px;
+    border-radius: $_border-radius--small;
 }
 
 .border-radius--medium {
-    border-radius: 5px;
+    border-radius: $_border-radius--medium;
 }
 
 .border-radius--large {
-    border-radius: 7px;
+    border-radius: $_border-radius--large;
 }
