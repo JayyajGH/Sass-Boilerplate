@@ -5,17 +5,25 @@
 // Buttons - These styles are for use with both anchors that need to be styled
 // as buttons and buttons that need to be styled as... buttons.
 
+$_button-border-width--thin: .1875rem;
+$_button-border-radius--small: .1875rem;
+
 .button {
     display: inline-block;
+    text-decoration: none;
+    transition: 0.2s;
 }
 
 .button--simple {
-    text-decoration: none;
     border-style: none;
 }
 
-//.btn--ghost {
-//}
+.button--ghost {
+    background: none;
+    border-style: solid;
+    border-width: $_button-border-width--thin;
+    border-radius: $_button-border-radius--small;
+}
 
 // Size variants
 .button--small {
@@ -71,10 +79,32 @@
     }
 }
 
-.button-icon {
+.button-ghost--primary {
+    border-color: color('purple', 'base');
+    color: color('black');
+
+    &:hover {
+      color: color('white');
+      background-color: color('purple', 'base');
+    }
 }
 
-.button-icon-left {
+.button-ghost--secondary {
+    border-color: color('green', 'light');
+    color: color('black');
+
+    &:hover {
+      background-color: color('green', 'base');
+    }
+}
+
+.button-ghost--tertiary {
+    border-color: color('grey', 'x-light');
+    color: color('black');
+
+    &:hover {
+      background-color: color('grey', 'dark');
+    }
 }
 
 .button-group {
