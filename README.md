@@ -1,6 +1,6 @@
 # Sass boilerplate library
 
-This is a sample project containing the basic boilerplate Sass styling code to get a project up and running.
+This is a boilerplate project containing the basic Sass styling code to get a project up and running.
 
 Its structure is based on the SMACSS and 7-1 architecture patterns and it contains the basic code to get up and running with breakpoints, typography, colours and other core elements.
 
