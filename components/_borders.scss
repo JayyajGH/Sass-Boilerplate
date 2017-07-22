@@ -20,7 +20,15 @@ $_border-radius--large: .4375rem;
 $_border-direction--top: 'top';
 $_border-direction--bottom: 'bottom';
 
-/// Set the border width whilst ensuring the vertical rhythm is correct
+/// Set the border width whilst ensuring the vertical rhythm is correct.
+///
+/// This means adding some padding which, with the border, adds up to the baseline.
+/// For bottom borders this will be bottom padding to separate it from the content.
+/// For top borders this will be top padding.
+/// The padding between the content and the border will be slightly different
+/// depending on the width of the border.  An element with a thicker border will
+/// have slightly less padding than an element with a thiner border.
+/// This is the price you have to pay for keeping a consistent vertical rhythm.
 /// @param {number} $width - Width of required border
 /// @param {string} $side [''] - Side to add border to.  If omitted the border will be added to all sides
 /// @example scss
