@@ -45,11 +45,11 @@ $_color-palettes: (
 
 /// Definition of the opacity options for the color palette.
 /// To apply to either dark or light colours
-/// @access public
+/// @access private
 /// @example scss
-///   $alpha: map-get($opacity-options, 'light')
+///   $alpha: map-get($_opacity-options, 'light')
 ///   // .8
-$opacity-options: (
+$_opacity-options: (
     'light': .8,
     'dark': .4
 );
@@ -57,7 +57,7 @@ $opacity-options: (
 /// Function for returing the hex color definition from the palette, tone and opacity
 /// @access public
 /// @require {variable} $_color-palettes
-/// @require {variable} $opacity-options
+/// @require {variable} $_opacity-options
 /// @param {string} $palette - The required palette
 /// @param {string} $tone - The required palette tone
 /// @param {string | number} $opacity [1] - The required opacity.  Can be a number or a value in the map
@@ -83,7 +83,7 @@ $opacity-options: (
 
                 // Get the alpha setting
                 // If the type passed in is a number then use it directly.  Otherwise see if it is in the map
-                $alpha: if(type-of($opacity) == 'number', $opacity, map-get($opacity-options, $opacity));
+                $alpha: if(type-of($opacity) == 'number', $opacity, map-get($_opacity-options, $opacity));
 
                 // Set the alpha of the color
                 @if $alpha {
