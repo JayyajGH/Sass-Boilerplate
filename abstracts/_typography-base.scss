@@ -47,6 +47,16 @@ $baseline: 1.5rem;
 /// The font size and the line height (leading) are defined
 /// @access public
 $types: (
+    'extra small and above': (
+        // Major third
+        -2: ( font-size: .64rem, line-height: $baseline ),
+        -1: ( font-size: .8rem, line-height: $baseline ),
+        0:  ( font-size: 1rem, line-height: $baseline ),
+        1:  ( font-size: 1.25rem, line-height: $baseline*2 ),
+        2:  ( font-size: 1.563rem, line-height: $baseline*2 ),
+        3:  ( font-size: 1.953rem, line-height: $baseline*2 ),
+        4:  ( font-size: 2.441rem, line-height: $baseline*3 )
+    ),
     'small and above': (
         // Major third
         -2: ( font-size: .64rem, line-height: $baseline ),
@@ -68,6 +78,16 @@ $types: (
         4:  ( font-size: 3.157rem, line-height: $baseline*3 )
     ),
     'large and above': (
+        // Perfect fifth
+        -2: ( font-size: .444rem, line-height: $baseline ),
+        -1: ( font-size: .667rem, line-height: $baseline ),
+        0:  ( font-size: 1rem, line-height: $baseline ),
+        1:  ( font-size: 1.5rem, line-height: $baseline*2 ),
+        2:  ( font-size: 2.25rem, line-height: $baseline*2 ),
+        3:  ( font-size: 3.375rem, line-height: $baseline*2 ),
+        4:  ( font-size: 5.063rem, line-height: $baseline*3 )
+    ),
+    'extra large and above': (
         // Perfect fifth
         -2: ( font-size: .444rem, line-height: $baseline ),
         -1: ( font-size: .667rem, line-height: $baseline ),
