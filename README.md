@@ -7,8 +7,7 @@ Its structure is based on the SMACSS and 7-1 architecture patterns and it contai
 Many of the ideas are combinations of various other ideas with some enhancements.  I have tried to list all sources in the acknowledgements section.
 It follows as many of the latest best practices as possible including atomic CSS, BEM, low selector specificity, good vertical rhythm, single direction margins etc.
 
-This is not a library of awesome design ideas.  The colours etc. are for demonstration purposes only.  The breakpoints, font-sizing and margins etc. are valid and could be used
-although you will probably want to swap them out for something to fit with your own design.
+This is not a library of awesome design ideas.  The colours etc. are for demonstration purposes only.  The breakpoints, font-sizing and margins etc. are valid and could be used although you will probably want to swap them out for something to fit with your own design.
 
 If vertical rhythm and modular type scales are new to you then these are some good articles:
 * [Modular type scale]( http://www.modularscale.com/?1&em&1.5&web&text )
@@ -18,8 +17,7 @@ If vertical rhythm and modular type scales are new to you then these are some go
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine.  All documentation is contained within the files themselves.  It can be read directly
-but a nicer way is to run it through [SassDoc](http://sassdoc.com/)
+These instructions will get you a copy of the project up and running on your local machine.  All documentation is contained within the files themselves.  It can be read directly but a nicer way is to run it through [SassDoc](http://sassdoc.com/)
 
 ### Prerequisites
 
@@ -35,7 +33,7 @@ See also the list of [contributors](https://github.com/JayyajGH/Sass-Boilerplate
 
 ## Contributing
 
-Please read [CONTRIBUTING.md](https://github.com/JayyajGH/Sass-Boilerplate/blob/master/CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
+Please read [CONTRIBUTING.md](https://github.com/JayyajGH/Sass-Boilerplate/blob/master/CONTRIBUTING.md) for details on the code of conduct, and the process for submitting pull requests.
 
 ## License
 
