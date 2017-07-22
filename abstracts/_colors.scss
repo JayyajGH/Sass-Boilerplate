@@ -13,11 +13,11 @@
 /// - mid-dark
 /// - dark
 /// - x-dark
-/// @access public
+/// @access private
 /// @example scss
 ///   $spectrum: map-get($color-palettes, 'grey')
 ///   $color: map-get($spectrum, 'dark')
-$color-palettes: (
+$_color-palettes: (
     'white': (
         'base': #FFF
     ),
@@ -56,7 +56,7 @@ $opacity-options: (
 
 /// Function for returing the hex color definition from the palette, tone and opacity
 /// @access public
-/// @require {variable} $color-palettes
+/// @require {variable} $_color-palettes
 /// @require {variable} $opacity-options
 /// @param {string} $palette - The required palette
 /// @param {string} $tone - The required palette tone
@@ -72,7 +72,7 @@ $opacity-options: (
     $color: null;
 
     // Get the color spectrum
-    $color-spectrum: map-get($color-palettes, $palette);
+    $color-spectrum: map-get($_color-palettes, $palette);
     @if $color-spectrum {
 
         // Get the color variant
