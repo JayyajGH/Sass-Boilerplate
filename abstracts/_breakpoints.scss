@@ -7,18 +7,13 @@
 /// These breakpoints are for reference only and you should choose suitable breakpoints
 /// for your own site. The one rule is don't match them to devices.
 ///
-/// Should we use pixels, rems or ems?
-/// - Never use pixels
-/// - Use rems for sizing and spacing
-/// - Use ems for media queries
-/// @link http://engageinteractive.co.uk/blog/em-vs-rem-vs-px Should we use pixels, rems or ems?
 /// @access public
 $breakpoints: (
-    //'extra small and above': (min-width: 37.5em),   // 600px = 37.5em
+    'extra small and above': (min-width: 37.5em),   // 600px = 37.5em
     'small and above': (min-width: 37.5em),   // 600px = 37.5em
     'medium and above': (min-width: 56.25em), //  900px = 56.25em
     'large and above': (min-width: 75em) // 1200px = 75em
-    //'extra large and above': (min-width: 100em) // 1600px = 100em
+    'extra large and above': (min-width: 100em) // 1600px = 100em
 );
 
 /// Responsive breakpoint manager
