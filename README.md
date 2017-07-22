@@ -55,9 +55,9 @@ The initial idea for using Sass maps for breakpoints came from here:
 * [Responsive breakpoints](https://www.sitepoint.com/managing-responsive-breakpoints-sass)
 
  Should we use pixels, rems or ems?  Hint:
- - Never use pixels
- - Use rems for sizing and spacing
- - Use ems for media queries
+ * Never use pixels
+ * Use rems for sizing and spacing
+ * Use ems for media queries
  * [Should we use pixels, rems or ems?](http://engageinteractive.co.uk/blog/em-vs-rem-vs-px)
 
 Using utility classes:
