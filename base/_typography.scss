@@ -51,6 +51,7 @@ body {
 .header1 {
     @include type-setting(4);
     margin-bottom: $baseline * 2;
+    font-weight: bold;
     // Any other style like colour or font weight
 }
 
