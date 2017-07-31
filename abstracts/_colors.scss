@@ -24,11 +24,6 @@ $_color-palettes: (
     'black': (
         'base': #000
     ),
-    'purple': (
-        'base': #60C,
-        'light': #D9B3FF,
-        'dark': #4D0099
-    ),
     'grey': (
         'x-light': #F2F2F2,
         'light': #D9D9D9,
@@ -36,10 +31,20 @@ $_color-palettes: (
         'dark': #8C8C8C,
         'darker': #666
     ),
+    'purple': (
+        'base': #60C,
+        'light': #D9B3FF,
+        'dark': #4D0099
+    ),
     'green': (
         'light': #9FB,
         'base': #0C4,
         'dark': #062
+    ),
+    'blue': (
+        'light': #D6D6FF,
+        'base': #00F,
+        'dark': #4C4C7F
     )
 );
 
