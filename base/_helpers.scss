@@ -43,6 +43,18 @@
     display: inline-block !important;
 }
 
+.u-text-lowercase {
+  text-transform: lowercase;
+}
+
+.u-text-uppercase {
+  text-transform: uppercase;
+}
+
+.u-text-capitalize {
+  text-transform: capitalize;
+}
+
 // Hiding content
 
 // NB: This will not be available to screenreaders.  Some screenreaders will ignore display: none
