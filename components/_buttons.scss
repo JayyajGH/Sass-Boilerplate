@@ -90,7 +90,7 @@ $_button-border-radius--small: .1875rem;
 }
 
 .button-ghost--secondary {
-    border-color: color('green', 'light');
+    border-color: color('green', 'base');
     color: color('black');
 
     &:hover {
@@ -99,11 +99,11 @@ $_button-border-radius--small: .1875rem;
 }
 
 .button-ghost--tertiary {
-    border-color: color('grey', 'x-light');
+    border-color: color('grey', 'base');
     color: color('black');
 
     &:hover {
-      background-color: color('grey', 'dark');
+      background-color: color('grey', 'base');
     }
 }
 
