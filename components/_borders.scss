@@ -138,6 +138,10 @@ $_border-direction--right: 'right';
     border-color: color('black');
 }
 
+.border-color--grey {
+    border-color: color('grey');
+}
+
 .border-radius--small {
     border-radius: $_border-radius--small;
 }
