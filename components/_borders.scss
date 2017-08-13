@@ -19,6 +19,8 @@ $_border-radius--large: .4375rem;
 
 $_border-direction--top: 'top';
 $_border-direction--bottom: 'bottom';
+$_border-direction--left: 'left';
+$_border-direction--right: 'right';
 
 /// Set the border width whilst ensuring the vertical rhythm is correct.
 ///
@@ -106,6 +108,30 @@ $_border-direction--bottom: 'bottom';
 
 .borderbottom-width--thick {
     @include _border-width($_border-width--thick, $_border-direction--bottom);
+}
+
+.borderleft-width--thin {
+    @include _border-width($_border-width--thin, $_border-direction--left);
+}
+
+.borderleft-width--medium {
+    @include _border-width($_border-width--medium, $_border-direction--left);
+}
+
+.borderleft-width--thick {
+    @include _border-width($_border-width--thick, $_border-direction--left);
+}
+
+.borderright-width--thin {
+    @include _border-width($_border-width--thin, $_border-direction--right);
+}
+
+.borderright-width--medium {
+    @include _border-width($_border-width--medium, $_border-direction--right);
+}
+
+.borderright-width--thick {
+    @include _border-width($_border-width--thick, $_border-direction--right);
 }
 
 .border-color--black {
