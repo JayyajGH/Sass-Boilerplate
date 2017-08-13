@@ -64,6 +64,14 @@ $_border-direction--bottom: 'bottom';
     border-style: solid;
 }
 
+.border--dashed {
+    border-style: dashed;
+}
+
+.border--dotted {
+    border-style: dotted;
+}
+
 .border-width--thin {
     @include _border-width($_border-width--thin);
 }
