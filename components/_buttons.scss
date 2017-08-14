@@ -11,7 +11,7 @@ $_button-border-radius--small: .1875rem;
 .button {
     display: inline-block;
     text-decoration: none;
-    transition: 0.2s;
+    transition: .2s;
 }
 
 .button--simple {
@@ -84,8 +84,8 @@ $_button-border-radius--small: .1875rem;
     color: color('black');
 
     &:hover {
-      color: color('white');
-      background-color: color('purple', 'base');
+        color: color('white');
+        background-color: color('purple', 'base');
     }
 }
 
@@ -94,7 +94,7 @@ $_button-border-radius--small: .1875rem;
     color: color('black');
 
     &:hover {
-      background-color: color('green', 'base');
+        background-color: color('green', 'base');
     }
 }
 
@@ -103,7 +103,7 @@ $_button-border-radius--small: .1875rem;
     color: color('black');
 
     &:hover {
-      background-color: color('grey', 'base');
+        background-color: color('grey', 'base');
     }
 }
 
