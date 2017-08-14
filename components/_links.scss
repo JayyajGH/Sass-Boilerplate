@@ -22,5 +22,12 @@
 }
 
 .link--phone {
+    // For semantic reasons you should also mark up the anchor tag as "tel=" as not all browsers/devices will automatically recognise a phone number
     @include link-color(color('black', 'base'), color('grey', 'base'), color('purple', 'base'), color('white', 'base'));
+    text-decoration: none;
+
+    &::before {
+        content: '\260e';
+        margin-right: .5em;
+    }
 }
