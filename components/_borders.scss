@@ -15,7 +15,7 @@ $_border-width--thick: .4375rem;
 
 $_border-radius--small: .1875rem;
 $_border-radius--medium: .3125rem;
-$_border-radius--large: .4375rem;
+$_border-radius--large: .625rem;
 
 $_border-direction--top: 'top';
 $_border-direction--bottom: 'bottom';
@@ -152,4 +152,8 @@ $_border-direction--right: 'right';
 
 .border-radius--large {
     border-radius: $_border-radius--large;
+}
+
+.border-radius--circle {
+  border-radius: 50%;
 }
