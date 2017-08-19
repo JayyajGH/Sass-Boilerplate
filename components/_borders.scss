@@ -53,12 +53,15 @@ $_border-direction--right: 'right';
     $padding: $baseline - $width;
 
     @if ($side == '') {
+        // Borders on all sides
         border-width: $width;
         padding-top: $padding;
         padding-bottom: $padding;
     } @else {
         border-#{$side}-width: $width;
-        padding-#{$side}: $padding;
+        @if ($side == 'top' or $side == 'bottom') {
+            padding-#{$side}: $padding;
+        }
     }
 }
 
