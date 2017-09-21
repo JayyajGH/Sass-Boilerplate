@@ -21,6 +21,10 @@ This project is work in progress and will forever stay that way as new concepts 
 
 These instructions will get you a copy of the project up and running on your local machine.  All documentation is contained within the files themselves.  It can be read directly but a nicer way is to run it through [SassDoc](http://sassdoc.com/)
 
+### Component based architecture
+
+If you are using a component based architecture then this layout will fit in well to the structure. e.g. Vue or React.  The main app should include the general CSS build as main.css and each component can include only the required CSS for that component and if required, also scope it to that component.  The default included here has all components included in the main CSS file.  To support a component structure then remove the components from being included in the main CSS and include the individual component Sass files in each component.  They will then also need to import the combined abstracts file.
+
 ### Prerequisites
 
 This project is written in Sass and so you will need a way of building Sass.
