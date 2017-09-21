@@ -29,6 +29,9 @@
   'layout/footer';
 
 // 5. Components
+// If a component architecture is used then these imports can be removed from
+// inclusion in the main css file and imported separately into each component.
+// Each file will need to import the abstracts sass file.
 @import
   'components/buttons',
   'components/links',
