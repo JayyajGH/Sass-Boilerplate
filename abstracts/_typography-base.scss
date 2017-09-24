@@ -180,3 +180,32 @@ $types: (
         }
     }
 }
+
+// Extend these placeholders to create text styles
+%bodybase {
+    @include type-setting(0);
+    letter-spacing: 0;
+    margin-bottom: $baseline;
+}
+
+%bodynormal {
+    @extend %bodybase;
+    font-weight: normal;
+}
+
+%bodybold {
+    @extend %bodybase;
+    font-weight: bold;
+}
+
+%bodysmall {
+    @include type-setting(-1);
+    letter-spacing: 0;
+    margin-bottom: $baseline;
+}
+
+%bodysmallest {
+    @include type-setting(-2);
+    letter-spacing: 0;
+    margin-bottom: $baseline;
+}
