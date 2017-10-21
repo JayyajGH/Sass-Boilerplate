@@ -69,7 +69,7 @@
     position: absolute;
     left: -10000px;
     top: auto;
-    width: 1px;
-    height: 1px;
+    width: 1px !important;
+    height: 1px !important;
     overflow: hidden;
 }
