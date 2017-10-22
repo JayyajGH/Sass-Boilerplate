@@ -43,6 +43,16 @@
     display: inline-block !important;
 }
 
+// Position settings
+.u-relative {
+    position: relative;
+}
+
+.u-absolute {
+    position: absolute;
+}
+
+// Text transforms
 .u-text-lowercase {
     text-transform: lowercase;
 }
