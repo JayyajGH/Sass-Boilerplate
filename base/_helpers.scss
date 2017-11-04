@@ -69,6 +69,10 @@
     text-transform: capitalize;
 }
 
+.u-text-decoration--none {
+    text-decoration: none;
+}
+
 // Hiding content
 
 // NB: This will not be available to screenreaders.  Some screenreaders will ignore display: none
