@@ -43,6 +43,10 @@
     display: inline-block !important;
 }
 
+.u-flex {
+    display: flex !important;
+}
+
 // Position settings
 .u-relative {
     position: relative;
@@ -63,6 +67,10 @@
 
 .u-text-capitalize {
     text-transform: capitalize;
+}
+
+.u-text-decoration--none {
+    text-decoration: none;
 }
 
 // Hiding content
