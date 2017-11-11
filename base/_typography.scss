@@ -8,7 +8,7 @@
 
 // Set up a default set of styles for the body
 body {
-    @extend %bodybase;
+    @include body-base();
     font-family: Arial, 'Times New Roman', Times, serif;
     background-color: color('white', 'base');
     color: color('black', 'base');

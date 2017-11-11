@@ -58,7 +58,7 @@ The colour palette ideas were formed from these articles:
 The initial idea for using Sass maps for breakpoints came from here:
 * [Responsive breakpoints](https://www.sitepoint.com/managing-responsive-breakpoints-sass)
 
- Should we use pixels, rems or ems?  Hint:
+ Should we use pixels, rems or ems? The general rules are:
  * Never use pixels
  * Use rems for sizing and spacing
  * Use ems for media queries
@@ -70,6 +70,10 @@ Using utility classes:
 
 Using single direction margins:
 * [Single direction margins](https://csswizardry.com/2012/06/single-direction-margin-declarations/)
+
+Should we use extends or mixins: (Hint: Use mixins...)
+* [Extends or mixins](https://csswizardry.com/2014/11/when-to-use-extend-when-to-use-a-mixin/)
+
 
 Some static code analysis tools I've used are:
 * [Sass linter](https://www.npmjs.com/package/sass-lint)

@@ -181,31 +181,31 @@ $types: (
     }
 }
 
-// Extend these placeholders to create text styles
-%bodybase {
-    @include type-setting(0);
-    letter-spacing: 0;
-    margin-bottom: $baseline;
+// Use these mixins to create text styles
+@mixin body-base() {
+  @include type-setting(0);
+  letter-spacing: 0;
+  margin-bottom: $baseline;
 }
 
-%bodynormal {
-    @extend %bodybase;
-    font-weight: normal;
+@mixin body-normal() {
+  @include body-base();
+  font-weight: normal;
 }
 
-%bodybold {
-    @extend %bodybase;
-    font-weight: bold;
+@mixin body-bold() {
+  @include body-base();
+  font-weight: bold;
 }
 
-%bodysmall {
-    @include type-setting(-1);
-    letter-spacing: 0;
-    margin-bottom: $baseline;
+@mixin body-small() {
+  @include type-setting(-1);
+  letter-spacing: 0;
+  margin-bottom: $baseline;
 }
 
-%bodysmallest {
-    @include type-setting(-2);
-    letter-spacing: 0;
-    margin-bottom: $baseline;
+@mixin body-smallest() {
+  @include type-setting(-2);
+  letter-spacing: 0;
+  margin-bottom: $baseline;
 }
