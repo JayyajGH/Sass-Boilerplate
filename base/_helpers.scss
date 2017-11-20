@@ -49,32 +49,32 @@
 
 // Position settings
 .u-relative {
-    position: relative;
+    position: relative !important;
 }
 
 .u-absolute {
-    position: absolute;
+    position: absolute !important;
 }
 
 .u-full-width {
-  width: 100%;
+  width: 100% !important;
 }
 
 // Text transforms
 .u-text-lowercase {
-    text-transform: lowercase;
+    text-transform: lowercase !important;
 }
 
 .u-text-uppercase {
-    text-transform: uppercase;
+    text-transform: uppercase !important;
 }
 
 .u-text-capitalize {
-    text-transform: capitalize;
+    text-transform: capitalize !important;
 }
 
 .u-text-decoration--none {
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 // Hiding content
